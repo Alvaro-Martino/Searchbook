@@ -1,0 +1,87 @@
+body {font-family: 'Open Sans', sans-serif; font-weight: 300; font-size: 20px; margin: 0;}
+
+.container { margin: 0 auto; max-width: 900px; padding: 0 20px; text-align: center }
+
+p { color: #35302D}
+
+h1 {font-weight: 700; margin: 20px 0; color: #000;}
+
+header {background: url(../img/fondo1.jpg) center top fixed;  margin: 0; padding: 50px 0; background-size:  cover }
+
+ /* background-image: url(../img/fondo1.jpg); background-size: cover;
+ background-position: center top; background-attachment: fixed ---- esto vamos a resumir */
+
+/* background-size: cover es un valor que sirve para cubrir el 100% de alto o de alto dependiendo el tamanio,
+ el problema es que perdemos mucha foto.. */
+
+/* backgraund-position, es para alinear el fondo en diferentes partes de la pantalla, tiene 9 posibilidades
+, top, bottom, left, right y center. con sus combinaciones (se nota cuando achicamos la imagen) */
+
+/* el background atachment deja fija la foto */
+
+
+.headerHome {height: 200px; text-align: center}
+header a {text-decoration: none}
+
+/* CAMBIOS DE LA CLASE DISPLAY */
+
+/* Transition: es una propiedad que hace que los cambios de color o los cambios sean paulatinos, y no al instante
+, de a poco */
+
+nav {background-color: #C1823E; margin: 0; font-size: 0px; text-align: center}
+
+nav a { text-decoration: none; color: #000; display: inline-block; height: 60px; padding: 0 20px; line-height: 60px;
+ font-size: 20px; transition: background  0.7s; display: block }
+nav a:hover { background-color: #284856; color: #fff}
+
+h1,h2 { text-align: center }
+
+.press {background-color: #777777; color: #fff}
+
+
+
+/* border es con el siguiente orden: ancho, estilo (solid, dashed y dotted) y color */
+/* el border-radius es para hacer que los bordes se redondeen */
+
+/* CAMBIOS DE LA CLASE DISPLAY  */
+
+
+footer { text-align: center; font-size: 14px; padding: 40px 0 }
+
+
+/* nav a, es un selector descendente, o sea, serian los a contenidos en el nav */
+
+
+
+
+/*contacto*/
+.contacto {background-color: #aaa; margin-bottom: 100px ;padding: 10px}
+/*formulario*/
+	.form-consulta {max-width: 500px; margin: 0 auto; font-family: 'Source Sans Pro', sans-serif;}
+	.campo-form {width:100%; height:36px; margin:2px 0 6px; padding-left:6px; box-sizing: border-box; border-radius:3px; border:0; font-family: 'Source Sans Pro', sans-serif; font-size:1em;}
+	label span {color: #f00}
+	textarea {min-height: 100px!important;}
+	.btn-form {display: inline-block; border:0; background: #000; height: 46px; line-height: 46px; padding: 0 20px; border-radius: 6px; color:#fff; text-decoration: none; text-transform: uppercase; letter-spacing: 1px}
+	.btn-form:hover {background: #444}
+
+
+	#imagebutton { background-color: #CC3F0C }
+	#imagebutton:hover { background-color: #771607 }
+
+.activo { background-color: #444 }
+
+.contenido span { color: red }
+#botones { padding: 4px; margin-top: 3px }
+.btn-pag { margin: 4px }
+
+
+@media only screen and (min-width: 768px) {
+
+
+nav a { display: inline-block }
+
+.containerweb { margin: 0 auto; max-width: 900px; padding: 0 20px; text-align: center }
+
+
+
+}
