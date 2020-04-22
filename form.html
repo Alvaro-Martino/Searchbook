@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<title>Formulario</title>
+<link href="estilo.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+	<div class="container">
+
+<!-- formulario de contacto -->
+
+	<form class="form-consulta" id="formulario">
+
+		<label>Url de búsqueda
+		<input type="url" name="url" placeholder="URL" class="campo-form" id="urlf">
+		</label>
+		
+		<label>Nombre y apellido: <span>*</span>
+			<input type="text" name="nombre" placeholder="Nombre y apellido" class="campo-form" id="namef" required>
+		</label>
+		
+		<label>Email: <span>*</span>
+			<input type="email" name="email" placeholder="Email" class="campo-form" id="emailf" required>
+		</label>
+		
+		<label>Consulta:
+			<textarea name="consulta" class="campo-form"></textarea>
+		</label>
+		<button type="submit" class="btn-form" >Enviar</button> <input type="reset" value="borrar" class="btn-form">
+	</form>
+
+<!-- formulario -->
+</div>
+<script src="history.js">history.js</script>
+
+</body>
+
+</html>
