@@ -12,17 +12,40 @@ if (editor != ''){
 							//editor tiene contenido y ambos tienen contenido
 							continuacion = "+intitle:" + titulo + "+inauthor:" + autor +  "+inpublisher:" + editor;
 
+							let tituloformulario = document.querySelector('#titulo').value;
+							let autorformulario = document.querySelector('#autor').value;
+							let editorformualrio = document.querySelector('#editor').value;
+
+							CrearItem(tituloformulario);
+							CrearItem(autorformulario);
+							CrearItem(editorformualrio);
+							GuardarDB();
+
 					} else if(autor != '' && titulo == '') {
 							//editor tiene contenido y solo autor tiene contenido
 							continuacion = "+inauthor:" + autor + "+inpublisher:" + editor;
+							let autorformulario = document.querySelector('#autor').value;
+							let editorformualrio = document.querySelector('#editor').value;
+							CrearItem(autorformulario);
+							CrearItem(editorformualrio);
+							GuardarDB();
 
 					} else{ if (autor == '' && titulo != ''){
 							//editor tiene contenido y solo titulo tiene contenido
 							continuacion = "+intitle:" + titulo + "+inpublisher:" + editor;
 
+							let tituloformulario = document.querySelector('#titulo').value;
+							let autorformulario = document.querySelector('#editor').value;
+							CrearItem(tituloformulario);
+							CrearItem(editorformulario);
+							GuardarDB();
+
 
 					} else { // editor tiene contenido y ninguno tiene contenido
 							continuacion = "+inpublisher:" + editor;
+							let editorformualrio = document.querySelector('#editor').value;
+							CrearItem(editorformulario);
+							GuardarDB();
 							 }
 
 					}
@@ -34,13 +57,25 @@ if (editor != ''){
 							// editor no tiene contenido y ambos tienen contenido
 							continuacion = "+intitle:" + titulo + "+inauthor:" + autor;
 
+							let tituloformulario = document.querySelector('#titulo').value;
+							let autorformulario = document.querySelector('#autor').value;
+							CrearItem(tituloformulario);
+							CrearItem(autorformulario);
+							GuardarDB();
+
 					} else if(autor != '' && titulo == '') {
 							// editor no tiene contenido y solo autor tiene contenido
 							continuacion = "+inauthor:" + autor;
+							let autorformulario = document.querySelector('#autor').value;
+							CrearItem(autorformulario);
+							GuardarDB();
 
 					} else{ if (autor == '' && titulo != ''){
 							// editor no tiene contenido y solo titulo tiene contenido
 							continuacion = "+intitle:" + titulo;
+							let tituloformulario = document.querySelector('#titulo').value;
+							CrearItem(tituloformulario);
+							GuardarDB();
 
 
 					} else { //ninguno tiene contenido 
@@ -157,4 +192,23 @@ function quitarActivo(){
 	for(var i = 0; i < botones.length; i++){
 		$(botones[i]).removeClass('activo');
 	}
+}
+
+
+//llamo el id del formulario desde el html, ponele un id si no tenes .
+	const formulario = document.querySelector('#formulario');
+	let arrayHistorial = [];
+//esta es la funcion para que me los vaya poniendo en el array, no la toques
+	 const CrearItem = (guardar) => {
+	 	let item = {
+	 		guardar: guardar,
+	 	}
+
+	 	arrayHistorial.push(item);
+	 	return item;
+	 	}
+
+//funcion que carga el array al local storage tampoco la toques
+	 const GuardarDB = () => {
+	 	localStorage.setItem('historial', JSON.stringify(arrayHistorial));
 }
