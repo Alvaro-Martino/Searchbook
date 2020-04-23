@@ -156,7 +156,7 @@ function mostrarResul(data,desde,hasta){
 		resultado.innerHTML += '<h5>' + data.items[i].volumeInfo.publisher + '</h5>'
 		resultado.innerHTML += '<img class="img-lib" src= "' + data.items[i].volumeInfo.imageLinks.thumbnail + '"alt="imagen del libro">'
 		resultado.innerHTML += '<br><a href=' + data.items[i].volumeInfo.infoLink + '><button id="imagebutton" class="btn-form">Leer mas</button></a>'
-
+		resultado.innerHTML += '<br><a href="#"><button class="btn-form">Compartir</button></a>'
 	}
 
 	
@@ -169,11 +169,11 @@ function mostrarBotones(numpag){
 
 		if (i == 0){
 
-			botones.innerHTML += '<button type="button" class="btn-form btn-pag activo">' + (i+1) + '</button>'
+			botones.innerHTML += '<hr><button type="button" id="imagebutton" class="btn-form btn-pag activo">' + (i+1) + '</button>'
 
 		}else {
 
-		botones.innerHTML += '<button type="button" class="btn-form btn-pag">' + (i+1) + '</button>'
+		botones.innerHTML += '<button type="button" id="imagebutton" class="btn-form btn-pag">' + (i+1) + '</button>'
 	}
 	}
 

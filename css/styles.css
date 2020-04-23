@@ -65,7 +65,7 @@ footer { text-align: center; font-size: 14px; padding: 40px 0 }
 	.btn-form:hover {background: #444}
 
 
-	#imagebutton { background-color: #CC3F0C }
+	#imagebutton { background-color: #CC3F0C; margin-bottom: 10px }
 	#imagebutton:hover { background-color: #771607 }
 
 .activo { background-color: #444 }
