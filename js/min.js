@@ -156,7 +156,7 @@ function mostrarResul(data,desde,hasta){
 		resultado.innerHTML += '<h5>' + data.items[i].volumeInfo.publisher + '</h5>'
 		resultado.innerHTML += '<img class="img-lib" src= "' + data.items[i].volumeInfo.imageLinks.thumbnail + '"alt="imagen del libro">'
 		resultado.innerHTML += '<br><a href=' + data.items[i].volumeInfo.infoLink + '><button id="imagebutton" class="btn-form">Leer mas</button></a>'
-		resultado.innerHTML += '<br><a href="#"><button class="btn-form">Compartir</button></a>'
+		resultado.innerHTML += '<br><a href="form.html" ><button class="btn-form">Compartir</button></a>'
 	}
 
 	
@@ -194,6 +194,35 @@ function quitarActivo(){
 	}
 }
 
+function redireccionar(){
+	window.location = "index.html";
+}
+
+
+
+function valida(){
+
+	var cuerpo = document.getElementById('cuerpo').value
+	var msg = '';
+
+	if (cuerpo == ''){
+		msg = 'Debe ingresar un cuerpo al mensaje'
+	}else{
+		msg = 'Su mensaje fue enviado con exito'
+	}
+
+	alert(msg);
+	setTimeout("redireccionar()",5000)
+
+
+
+}
+
+
+
+
+
+
 
 //llamo el id del formulario desde el html, ponele un id si no tenes .
 	const formulario = document.querySelector('#formulario');
@@ -212,3 +241,8 @@ function quitarActivo(){
 	 const GuardarDB = () => {
 	 	localStorage.setItem('historial', JSON.stringify(arrayHistorial));
 }
+
+
+
+
+

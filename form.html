@@ -11,31 +11,37 @@
 <body>
 	<div class="container">
 
-<!-- formulario de contacto -->
+
 
 	<form class="form-consulta" id="formulario">
 
-		<label>Url de búsqueda
-		<input type="url" name="url" placeholder="URL" class="campo-form" id="urlf">
+		<label>Email emisor: <span>*</span>
+		<input type="url" name="url" placeholder="Email" class="campo-form" id="urlf" required>
 		</label>
 		
-		<label>Nombre y apellido: <span>*</span>
-			<input type="text" name="nombre" placeholder="Nombre y apellido" class="campo-form" id="namef" required>
+		<label>Nombre y apellido:
+			<input type="text" name="nombre" placeholder="Nombre y apellido" class="campo-form" id="namef">
 		</label>
 		
-		<label>Email: <span>*</span>
+		<label>Email receptor: <span>*</span>
 			<input type="email" name="email" placeholder="Email" class="campo-form" id="emailf" required>
 		</label>
 		
-		<label>Consulta:
-			<textarea name="consulta" class="campo-form"></textarea>
+		<label>Cuerpo:
+			<textarea name="consulta" id="cuerpo" class="campo-form"></textarea>
 		</label>
-		<button type="submit" class="btn-form" >Enviar</button> <input type="reset" value="borrar" class="btn-form">
+		<input type="submit" class="btn-form" value="Enviar" onclick= "return valida()"> <input type="reset" value="borrar" class="btn-form">
 	</form>
 
-<!-- formulario -->
+
 </div>
+
+<a href="index.html"><button class="btn-form">Volver</button></a>
+
+
+
 <script src="history.js">history.js</script>
+<script src="js/min.js"></script>
 
 </body>
 
