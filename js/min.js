@@ -12,9 +12,9 @@ if (editor != ''){
 							//editor tiene contenido y ambos tienen contenido
 							continuacion = "+intitle:" + titulo + "+inauthor:" + autor +  "+inpublisher:" + editor;
 
-							let tituloformulario = document.querySelector('#titulo').value;
-							let autorformulario = document.querySelector('#autor').value;
-							let editorformualrio = document.querySelector('#editor').value;
+							let tituloformulario = titulo;
+							let autorformulario = autor;
+							let editorformualrio = editor;
 
 							CrearItem(tituloformulario);
 							CrearItem(autorformulario);
@@ -24,8 +24,8 @@ if (editor != ''){
 					} else if(autor != '' && titulo == '') {
 							//editor tiene contenido y solo autor tiene contenido
 							continuacion = "+inauthor:" + autor + "+inpublisher:" + editor;
-							let autorformulario = document.querySelector('#autor').value;
-							let editorformualrio = document.querySelector('#editor').value;
+							let autorformulario = autor;
+							let editorformualrio = editor;
 							CrearItem(autorformulario);
 							CrearItem(editorformualrio);
 							GuardarDB();
@@ -34,8 +34,8 @@ if (editor != ''){
 							//editor tiene contenido y solo titulo tiene contenido
 							continuacion = "+intitle:" + titulo + "+inpublisher:" + editor;
 
-							let tituloformulario = document.querySelector('#titulo').value;
-							let autorformulario = document.querySelector('#editor').value;
+							let tituloformulario = titulo;
+							let autorformulario = editor;
 							CrearItem(tituloformulario);
 							CrearItem(editorformulario);
 							GuardarDB();
@@ -43,7 +43,7 @@ if (editor != ''){
 
 					} else { // editor tiene contenido y ninguno tiene contenido
 							continuacion = "+inpublisher:" + editor;
-							let editorformualrio = document.querySelector('#editor').value;
+							let editorformualrio = editor;
 							CrearItem(editorformulario);
 							GuardarDB();
 							 }
@@ -57,8 +57,8 @@ if (editor != ''){
 							// editor no tiene contenido y ambos tienen contenido
 							continuacion = "+intitle:" + titulo + "+inauthor:" + autor;
 
-							let tituloformulario = document.querySelector('#titulo').value;
-							let autorformulario = document.querySelector('#autor').value;
+							let tituloformulario = titulo;
+							let autorformulario = autor;
 							CrearItem(tituloformulario);
 							CrearItem(autorformulario);
 							GuardarDB();
@@ -66,14 +66,14 @@ if (editor != ''){
 					} else if(autor != '' && titulo == '') {
 							// editor no tiene contenido y solo autor tiene contenido
 							continuacion = "+inauthor:" + autor;
-							let autorformulario = document.querySelector('#autor').value;
+							let autorformulario = autor;
 							CrearItem(autorformulario);
 							GuardarDB();
 
 					} else{ if (autor == '' && titulo != ''){
 							// editor no tiene contenido y solo titulo tiene contenido
 							continuacion = "+intitle:" + titulo;
-							let tituloformulario = document.querySelector('#titulo').value;
+							let tituloformulario = titulo;
 							CrearItem(tituloformulario);
 							GuardarDB();
 
@@ -85,6 +85,7 @@ if (editor != ''){
 
 					}
 }
+
 
 
 
@@ -472,7 +473,3 @@ function mostrar2(){
 
 }
 
-function Rellenar()
-{ var campo = document.getElementById('optf').value;
-
-	document.getElementById("titulo").value = campo }
