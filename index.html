@@ -31,18 +31,21 @@
  
  		<form class="form-consulta" id="formulario">
 		<label>Titulo:
-			<input id=titulo placeholder="Titulo" class="campo-form">
+			<input id=titulo placeholder="Titulo" class="campo-form"><div>
+                  														<select id="select" class="select">
+                                       									 <option selected="true" disabled="disabled" id="optf" >Historial</option></select> 
 		</label>
 		
 		<label>Autor:
-			<input id="autor" placeholder="Autor" class="campo-form">
+			<input id="autor" placeholder="Autor" class="campo-form"> <select id="select1" class="select"> <option selected="true" disabled="disabled">Historial</option></select>
 		</label>
 		
 		<label>Editor:
-			<input id="editor" placeholder="Editor" class="campo-form">
+			<input id="editor" placeholder="Editor" class="campo-form"><select class="select" id="select2"> <option selected="true" disabled="disabled">Historial</option></select>
+		
 		</label>
 
-		<button type="button" id='boton' class="btn-form">Buscar</button>
+		<button type="button" id='boton' class="btn-form" id="boto" onclick="mostrarhistorial()">Buscar</button>
 		</form> 
 	</section>
 

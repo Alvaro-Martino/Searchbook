@@ -2,7 +2,15 @@ body {font-family: 'Open Sans', sans-serif; font-weight: 300; font-size: 20px; m
 
 .container { margin: 0 auto; max-width: 900px; padding: 0 20px; text-align: center }
 
-p { color: #35302D}
+p {
+	color: #35302D ;
+ 	font-size: 1.3em;
+ 	border-style: solid;
+	border-width: 3px;
+	border-radius: 9px;
+	border-color: #f0f3bd;
+	background-color: #f0f3bd;
+}
 
 h1 {font-weight: 700; margin: 20px 0; color: #000;}
 
@@ -51,32 +59,6 @@ footer { text-align: center; font-size: 14px; padding: 40px 0 }
 
 /* nav a, es un selector descendente, o sea, serian los a contenidos en el nav */
 
-
-
-
-/*contacto*/
-.contacto {background-color: #aaa; margin-bottom: 100px ;padding: 10px}
-/*formulario*/
-	.form-consulta {max-width: 500px; margin: 0 auto; font-family: 'Source Sans Pro', sans-serif;}
-	.campo-form {width:100%; height:36px; margin:2px 0 6px; padding-left:6px; box-sizing: border-box; border-radius:3px; border:0; font-family: 'Source Sans Pro', sans-serif; font-size:1em;}
-	label span {color: #f00}
-	textarea {min-height: 100px!important;}
-	.btn-form {display: inline-block; border:0; background: #000; height: 46px; line-height: 46px; padding: 0 20px; border-radius: 6px; color:#fff; text-decoration: none; text-transform: uppercase; letter-spacing: 1px}
-	.btn-form:hover {background: #444}
-
-
-	#imagebutton { background-color: #CC3F0C; margin-bottom: 10px }
-	#imagebutton:hover { background-color: #771607 }
-
-.activo { background-color: #444 }
-
-.contenido span { color: red }
-#botones { padding: 4px; margin-top: 3px }
-.btn-pag { margin: 4px }
-
-
-
-
 @media only screen and (min-width: 768px) {
 
 
@@ -84,9 +66,59 @@ nav a { display: inline-block }
 
 .containerweb { margin: 0 auto; max-width: 900px; padding: 0 20px; text-align: center }
 
-
-
 }
 
 .select{display: block;}
 .sl{display: inline-block;}
+
+/*----------------------------*/
+
+.imgAbout {
+	height: 400px;
+	width: 50%;
+} 
+.pstyle {
+	margin: auto;
+}
+
+.columna {
+	padding: 100px;
+	width: 50%;
+	margin: 15px;
+	
+} 
+
+.padre {
+	display: flex;
+	animation-name: fadeIn;
+	animation-duration: 3s;
+}
+
+
+.sectionMap {
+	width: 100%;
+}
+
+@media (max-width: 768px) {
+  	.padre {
+		flex-direction: column;
+	}
+	.imgAbout {
+		height: auto;
+		width: 100%;
+		animation-name: fadeInRight;
+		animation-duration: 3s;
+	}
+	p {	
+		margin: auto;
+		border-style: solid;
+		border-width: 3px;
+		border-radius: 9px;
+		border-color: #f0f3bd;
+		background-color: #f0f3bd;
+		animation-name: fadeIn;
+		animation-duration: 3s;
+	}
+	
+}
+

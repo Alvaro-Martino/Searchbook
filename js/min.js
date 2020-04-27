@@ -246,3 +246,233 @@ function valida(){
 
 
 
+
+ function mostrarhistorial(){
+
+            var texto = document.getElementById("titulo").value;
+            var texto1 = document.getElementById("autor").value;
+            var texto2 =   document.getElementById("editor").value;
+
+            if (texto == '' && texto1 == '' && texto2 == '') {
+                  
+                 
+            } else { 
+          
+
+            if (texto != '' && texto1 == '' && texto2 == '') {
+                
+                let alldatos=[];
+                datos=[];
+                datos.push(document.getElementById("titulo").value);
+                alldatos.push(datos)
+                arjson = JSON.stringify(alldatos);
+                localStorage.setItem("arrayHistorialTIT",arjson);
+    
+             
+                    mostrar();
+
+             } 
+            if (texto != '' && texto1 != '' && texto2 == '') {
+              
+                let alldatos1=[];
+                datos1=[];
+
+                let alldatos=[];
+                datos=[];
+
+                datos.push(document.getElementById("titulo").value);
+                datos1.push(document.getElementById("autor").value);
+
+                alldatos.push(datos);
+                alldatos1.push(datos1);
+
+                arjson = JSON.stringify(alldatos);
+                arjson1 = JSON.stringify(alldatos1);
+
+                localStorage.setItem("arrayHistorialTIT",arjson);
+                localStorage.setItem("arrayHistorialAUT",arjson1);
+    
+             
+                    mostrar();
+                    mostrar1();
+                 
+            }
+
+            if (texto != '' && texto1 != '' && texto2 != '') {
+                let alldatos1=[];
+                datos1=[];
+
+                let alldatos=[];
+                datos=[];
+
+                let alldatos2=[];
+                datos2=[];
+
+                datos.push(document.getElementById("titulo").value);
+                datos1.push(document.getElementById("autor").value);
+                datos2.push(document.getElementById("editor").value);
+
+                alldatos.push(datos);
+                alldatos1.push(datos1);
+                alldatos2.push(datos2);
+
+                arjson = JSON.stringify(alldatos);
+                arjson1 = JSON.stringify(alldatos1);
+                arjson2 = JSON.stringify(alldatos2);
+
+                localStorage.setItem("arrayHistorialTIT",arjson);
+                localStorage.setItem("arrayHistorialAUT",arjson1);
+                localStorage.setItem("arrayHistorialEDIT",arjson2);
+    
+             
+                    mostrar();
+                    mostrar1();
+                    mostrar2();
+           
+            }   
+                
+            if (texto != '' && texto1 == '' && texto2 != '') {
+                let alldatos=[];
+                datos=[];
+
+                let alldatos2=[];
+                datos2=[];
+
+                datos.push(document.getElementById("titulo").value);
+                datos2.push(document.getElementById("editor").value);
+
+                alldatos.push(datos);
+                alldatos2.push(datos2);
+
+                arjson = JSON.stringify(alldatos);
+                arjson2 = JSON.stringify(alldatos2);
+
+                localStorage.setItem("arrayHistorialTIT",arjson);
+                localStorage.setItem("arrayHistorialEDIT",arjson2);
+    
+             
+                mostrar();
+               
+                mostrar2();
+       
+           
+            }   
+
+            if (texto == '' && texto1 != '' && texto2 != '') {
+                let alldatos1=[];
+                datos1=[];
+
+
+                let alldatos2=[];
+                datos2=[];
+
+        
+                datos1.push(document.getElementById("autor").value);
+                datos2.push(document.getElementById("editor").value);
+
+           
+                alldatos1.push(datos1);
+                alldatos2.push(datos2);
+
+            
+                arjson1 = JSON.stringify(alldatos1);
+                arjson2 = JSON.stringify(alldatos2);
+
+         
+                localStorage.setItem("arrayHistorialAUT",arjson1);
+                localStorage.setItem("arrayHistorialEDIT",arjson2);
+    
+             
+               
+                mostrar1();
+                mostrar2();
+       
+            
+            }   
+
+            if (texto == '' && texto1 == '' && texto2 != '') {
+      
+                let alldatos2=[];
+                datos2=[];
+        
+                datos2.push(document.getElementById("editor").value);
+            
+                alldatos2.push(datos2);
+            
+                arjson2 = JSON.stringify(alldatos2);
+
+                localStorage.setItem("arrayHistorialEDIT",arjson2);
+    
+             
+                mostrar2();
+       
+            }  
+
+            if (texto == '' && texto1 != '' && texto2 == '') {
+                let alldatos1=[];
+                datos1=[];
+
+                datos1.push(document.getElementById("autor").value);
+           
+                alldatos1.push(datos1);
+   
+                arjson1 = JSON.stringify(alldatos1);
+       
+                localStorage.setItem("arrayHistorialAUT",arjson1);
+     
+              
+                mostrar1();
+               
+       
+                } 
+    }
+
+               
+
+
+function mostrar(){
+
+ campos = JSON.parse(localStorage.getItem("arrayHistorialTIT"));
+var selector = document.getElementById("select");
+    if (selector.length>4){
+        selector.remove(selector.length-2);
+    }
+    for(x=0; x < campos.length; x++){    
+        $("#select").prepend("<option value="+x+"> "+campos[x][0]+"</option>");
+      }
+ } 
+
+ function mostrar1(){
+
+    campos1 = JSON.parse(localStorage.getItem("arrayHistorialAUT"));
+    var selector = document.getElementById("select1");
+    if (selector.length>4){
+        selector.remove(selector.length-2);
+    }
+   
+         for(x=0; x < campos.length; x++){    
+             $("#select1").prepend("<option value="+x+"> "+campos1[x][0]+"</option>");
+           }
+    } 
+
+function mostrar2(){
+
+    campos2 = JSON.parse(localStorage.getItem("arrayHistorialEDIT"));
+    var selector = document.getElementById("select2");
+    if (selector.length>4){
+        selector.remove(selector.length-2);
+    }
+       
+    for(x=0; x < campos.length; x++){    
+        $("#select2").prepend("<option value="+x+"> "+campos2[x][0]+"</option>");
+               }
+        } 
+
+// TERMINA HISTORIAL
+
+}
+
+function Rellenar()
+{ var campo = document.getElementById('optf').value;
+
+	document.getElementById("titulo").value = campo }
