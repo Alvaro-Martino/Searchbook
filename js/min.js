@@ -209,10 +209,10 @@ function valida(){
 		msg = 'Debe ingresar un cuerpo al mensaje'
 	}else{
 		msg = 'Su mensaje fue enviado con exito'
+		setTimeout("redireccionar()",5000)		
 	}
 
 	alert(msg);
-	setTimeout("redireccionar()",5000)
 
 
 
