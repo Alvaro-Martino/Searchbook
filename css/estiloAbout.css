@@ -1,0 +1,124 @@
+body {font-family: 'Open Sans', sans-serif; font-weight: 300; font-size: 20px; margin: 0;}
+
+.container { margin: 0 auto; max-width: 900px; padding: 0 20px; text-align: center }
+
+p {
+	color: #35302D ;
+ 	font-size: 1.3em;
+ 	border-style: solid;
+	border-width: 3px;
+	border-radius: 9px;
+	border-color: #f0f3bd;
+	background-color: #f0f3bd;
+}
+
+h1 {font-weight: 700; margin: 20px 0; color: #000;}
+
+header {background: url(https://www.telesurtv.net/__export/1510353441275/sites/telesur/img/multimedia/2017/11/10/librerxa1.jpg) center top fixed;  margin: 0; padding: 50px 0; background-size:  cover }
+
+ /* background-image: url(../img/fondo1.jpg); background-size: cover;
+ background-position: center top; background-attachment: fixed ---- esto vamos a resumir */
+
+/* background-size: cover es un valor que sirve para cubrir el 100% de alto o de alto dependiendo el tamanio,
+ el problema es que perdemos mucha foto.. */
+
+/* backgraund-position, es para alinear el fondo en diferentes partes de la pantalla, tiene 9 posibilidades
+, top, bottom, left, right y center. con sus combinaciones (se nota cuando achicamos la imagen) */
+
+/* el background atachment deja fija la foto */
+
+
+.headerHome {height: 200px; text-align: center}
+header a {text-decoration: none}
+
+/* CAMBIOS DE LA CLASE DISPLAY */
+
+/* Transition: es una propiedad que hace que los cambios de color o los cambios sean paulatinos, y no al instante
+, de a poco */
+
+nav {background-color: #C1823E; margin: 0; font-size: 0px; text-align: center}
+
+nav a { text-decoration: none; color: #000; display: inline-block; height: 60px; padding: 0 20px; line-height: 60px;
+ font-size: 20px; transition: background  0.7s; display: block }
+nav a:hover { background-color: #284856; color: #fff}
+
+h1,h2 { text-align: center }
+
+.press {background-color: #777777; color: #fff}
+
+
+
+/* border es con el siguiente orden: ancho, estilo (solid, dashed y dotted) y color */
+/* el border-radius es para hacer que los bordes se redondeen */
+
+/* CAMBIOS DE LA CLASE DISPLAY  */
+
+
+footer { text-align: center; font-size: 14px; padding: 40px 0 }
+
+
+/* nav a, es un selector descendente, o sea, serian los a contenidos en el nav */
+
+@media only screen and (min-width: 768px) {
+
+
+nav a { display: inline-block }
+
+.containerweb { margin: 0 auto; max-width: 900px; padding: 0 20px; text-align: center }
+
+}
+
+.select{display: block;}
+.sl{display: inline-block;}
+
+/*----------------------------*/
+
+.imgAbout {
+	height: 400px;
+	width: 50%;
+} 
+.pstyle {
+	margin: auto;
+}
+
+.columna {
+	padding: 100px;
+	width: 50%;
+	margin: 15px;
+	
+} 
+
+.padre {
+	display: flex;
+	animation-name: fadeIn;
+	animation-duration: 3s;
+}
+
+
+.sectionMap {
+	width: 100%;
+}
+
+@media (max-width: 768px) {
+  	.padre {
+		flex-direction: column;
+	}
+	.imgAbout {
+		height: auto;
+		width: 100%;
+		animation-name: fadeInRight;
+		animation-duration: 3s;
+	}
+	p {	
+		margin: auto;
+		border-style: solid;
+		border-width: 3px;
+		border-radius: 9px;
+		border-color: #f0f3bd;
+		background-color: #f0f3bd;
+		animation-name: fadeIn;
+		animation-duration: 3s;
+	}
+	
+}
+
