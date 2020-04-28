@@ -199,6 +199,36 @@ function redireccionar(){
 	window.location = "index.html";
 }
 
+function enviarform(){
+var emaile = document.querySelector('#urlf').value;
+var emailr = document.querySelector('#emailf').value;
+var nom = document.querySelector('#namef').value;
+expresion = /\w+@\w+\.+[a-z]/;
+	if ( emaile == '') {
+		alert('Completar el email emisor');
+		return false;
+	}
+	else if (nom == ""){
+		alert('Completar nombre y apellido');
+		return false;
+	}
+	else if (emailr == ''){
+	alert('Completar el email receptor');
+	return false;
+	}
+	else if (!expresion.test(emaile)) {
+		alert('el correo emisor no es válido');	
+		return false;
+	}
+	else if (!expresion.test(emailr)) {
+		alert('el correo receptor no es válido');	
+		return false;}
+	else
+		valida();
+return false;
+
+}
+
 
 
 function valida(){
@@ -207,10 +237,13 @@ function valida(){
 	var msg = '';
 
 	if (cuerpo == ''){
-		msg = 'Debe ingresar un cuerpo al mensaje'
+		alert('Debe ingresar un cuerpo al mensaje')
+		return false;
+		
 	}else{
 		msg = 'Su mensaje fue enviado con exito'
-		setTimeout("redireccionar()",5000)		
+		setTimeout("redireccionar()",5000)
+
 	}
 
 	alert(msg);

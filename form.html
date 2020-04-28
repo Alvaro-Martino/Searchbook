@@ -16,7 +16,7 @@
 	<form class="form-consulta" id="formulario">
 
 		<label>Email emisor: <span>*</span>
-		<input type="email" name="email" placeholder="Email" class="campo-form" id="urlf" required>
+		<input name="email" placeholder="Email" class="campo-form" id="urlf">
 		</label>
 		
 		<label>Nombre y apellido:
@@ -24,13 +24,13 @@
 		</label>
 		
 		<label>Email receptor: <span>*</span>
-			<input type="email" name="email" placeholder="Email" class="campo-form" id="emailf" required>
+			<input name="email" placeholder="Email" class="campo-form" id="emailf">
 		</label>
 		
 		<label>Cuerpo:
 			<textarea name="consulta" id="cuerpo" class="campo-form"></textarea>
 		</label>
-		<input type="submit" class="btn-form" value="Enviar" onclick= "return valida()"> <input type="reset" value="borrar" class="btn-form">
+		<input type="submit" class="btn-form" value="Enviar" onclick= "return enviarform()"> <input type="reset" value="borrar" class="btn-form">
 	</form>
 
 
