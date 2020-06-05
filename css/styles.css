@@ -34,7 +34,8 @@ header {background: url(https://s1.1zoom.me/b5050/780/348522-admin_3840x2400.jpg
 
 
 .headerHome {height: 200px; text-align: center}
-header a {text-decoration: none}
+header a {text-decoration: none;}
+header a:hover{background: none}
 
 
 /* Transition: es una propiedad que hace que los cambios de color o los cambios sean paulatinos, y no al instante
