@@ -15,6 +15,9 @@ body a {text-decoration: none; color: #F5B700; height: 70px; line-height: 60px;
 p { color: #35302D}
 h1 {font-weight: 700; margin: 20px 0; color: #000;}
 .frases{padding-bottom: 55px}
+.frase1{color: white; text-shadow: red 0.1em 0.1em 0.2em;font-family: 'Anton', sans-serif;font-size: 30px}
+.frase2{color: white; text-shadow: red 0.1em 0.1em 0.2em;font-family: 'Anton', sans-serif;font-size: 30px}
+.frase3{color: white; text-shadow: red 0.1em 0.1em 0.2em;font-family: 'Anton', sans-serif;font-size: 30px}
 .covi {font-family:bold;}
 header {background: url(https://s1.1zoom.me/b5050/780/348522-admin_3840x2400.jpg) center bottom fixed;  margin: 0; padding: 15px 0; background-size:  cover }
 
