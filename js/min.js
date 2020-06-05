@@ -7,6 +7,7 @@ function bookSearch() {
 	editor = document.getElementById('editor').value
 	var continuacion = '';
 
+
 if (editor != ''){
 					if (autor != '' && titulo != '' ) {
 							//editor tiene contenido y ambos tienen contenido
@@ -304,6 +305,7 @@ function valida(){
     
              
                     mostrar();
+                    alargue();
 
              } 
             if (texto != '' && texto1 != '' && texto2 == '') {
@@ -329,6 +331,7 @@ function valida(){
              
                     mostrar();
                     mostrar1();
+                    alargue();
                  
             }
 
@@ -362,6 +365,7 @@ function valida(){
                     mostrar();
                     mostrar1();
                     mostrar2();
+                    alargue();
            
             }   
                 
@@ -388,6 +392,7 @@ function valida(){
                 mostrar();
                
                 mostrar2();
+                alargue();
        
            
             }   
@@ -420,6 +425,7 @@ function valida(){
                
                 mostrar1();
                 mostrar2();
+                alargue();
        
             
             }   
@@ -439,6 +445,7 @@ function valida(){
     
              
                 mostrar2();
+                alargue();
        
             }  
 
@@ -456,7 +463,7 @@ function valida(){
      
               
                 mostrar1();
-               
+               alargue();
        
                 } 
     }
@@ -506,3 +513,57 @@ function mostrar2(){
 
 }
 
+function alargue(){
+document.getElementById("boton").onclick=tamano;}
+
+function tamano(){
+document.getElementById("links").classList.remove("links");
+document.getElementById("links").classList.add("bg");}
+
+
+function frasesalea() {
+	let random = "";
+	let frases = ["<p class='frase1'>Para mejorar el mundo no es necesario pensárselo.</p>",
+	"<p class='frase2'>La búsqueda constante de la perfección siempre desemboca en la frustración.</p>",
+	"<p class='frase3'>Olvídate de la vejez y empieza a crecer personalmente.</p>"];
+	let f= frases.length;
+		random += Math.floor(Math.random()*f);
+
+console.log(frases[random])
+document.getElementById("frases").innerHTML = frases[random];
+}
+
+
+
+function obtenerdatos(){
+ document.innerHTML = ''
+    const url = 'https://api.covid19api.com/summary'
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        let info = document.getElementById('resultadoC');
+        info.innerHTML = `
+        <h1>COVID-19</h1>
+            <h1>Datos en Argentina</h1> 
+            <p class='covi'>
+        Fecha Actualizada: ${data.Countries[6].Date.substring(0,10)}<br>
+            Nuevos casos Confirmados: ${data.Countries[6].NewConfirmed}<br>
+            Nuevas muertes Confirmadas: ${data.Countries[6].NewDeaths}<br>
+            Nuevos casos Recuperados: ${data.Countries[6].NewRecovered}<br>
+            Total de casos Confirmados: ${data.Countries[6].TotalConfirmed}<br>
+            Total de muertes Confirmadas: ${data.Countries[6].TotalDeaths}<br>
+            Total de casos Recuperados: ${data.Countries[6].TotalRecovered}</p> 
+
+            <h1>Datos en el mundo</h1>
+            <p class='covi'>
+            Fecha Actualizada: ${data.Countries[6].Date.substring(0,10)}<br>
+            Nuevos casos Confirmados ${data.Global.NewConfirmed}<br>
+            Nuevas muertes Confirmadas: ${data.Global.NewDeaths}<br>
+            Nuevos casos Recuperados: ${data.Global.NewRecovered}<br>
+            Total de Casos Confirmados: ${data.Global.TotalConfirmed}<br>
+            Total de Muertes Confirmadas: ${data.Global.TotalDeaths}<br>
+            Total de Casos Cecuperados: ${data.Global.TotalRecovered}</p>
+        `
+    })
+    .catch(error=>console.log(error)) 
+}

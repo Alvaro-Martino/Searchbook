@@ -8,8 +8,8 @@
 </head>
 <body>
 	<header class="headerHome">
-		<div class="container">
-			<a href="index.html"><img src="img/logo.jpg" alt="Logo del ejercicio 4"></a>
+		<div class="containerlogo">
+			<a href="inicio.html"><img class="imagen" src="img/logo.jpg" alt="Logo del ejercicio 4"><p class="costado"><span>TP1</span> - Franco Cortina Ugolini</p></a>
 
 		</div>
 	</header>
@@ -17,14 +17,19 @@
 
 	<nav>
 		<div class="containerweb">
-			<a href="index.html">Inicio</a>
-			<a href="About.html">Sobre nosotros</a>
+			<a href="inicio.html">Inicio</a>
+			<a href="about.html">Contacto</a>
+
 		</div>
 	</nav>
+<section class="links" id="links">
+		<p>Link api 1</p>
+		<a  href="index2.html"><p class="som">Link api 2</p></a>
+	</section>
 
 	<section class="container">
 
-		<h1>Busqueda</h1>
+		<h1 id="bd">Busqueda</h1>
 		<h2>Libros</h2>
 
 	<section class="contacto">
@@ -45,23 +50,21 @@
 		
 		</label>
 
-		<button type="button" id='boton' class="btn-form" id="boto" onclick="mostrarhistorial()">Buscar</button>
+		<button type="button" id='boton' class="btn-form" id="boto" onclick="mostrarhistorial();tamano()">Buscar</button>
 		</form> 
 	</section>
 
 	<div id="resultado" class="container"></div>
 	<div id="botones" class="container"></div>
-
-	</section>
-
-	<footer>Aplicaciones moviles 2020</footer>
-
+	
+</section>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="jquery-3.4.1.min.js"></script>
 <script src="js/min.js"></script>
 
-
-
 </body>
+<div class="footerF">
+	<p class="pie">TyGweb 03/06/2020</p>
+</div>
 </html>
 

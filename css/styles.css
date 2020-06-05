@@ -1,15 +1,25 @@
 body {font-family: 'Open Sans', sans-serif; font-weight: 300; font-size: 20px; margin: 0;}
-
-.container { margin: 0 auto; max-width: 900px; padding: 0 20px; text-align: center }
-
+*{box-sizing:border-box;}
+.container { max-width: 900px;  text-align: center;width: 70%;float: left;margin: 0 auto; padding-left: 100px;display: inline-block;}
+.links{background-color: black;width: 20%;float: left;display: inline-block;display: block; height: 650px;text-align: center;}
+body a:hover{ background-color: #284856; color: #fff;}
+body a {text-decoration: none; color: #F5B700; height: 70px; line-height: 60px;
+ font-size: 20px; transition: background  0.7s; display: block}
+.som{color: #F5B700; font-family: bold}
+.containerlogo{float: left;margin-top: 0}
+.imagen{width: 100px; display: inline-block;}
+.costado{display: inline-block;color: black;font-family: bold}
+.footerF{bottom: 0;position: fixed;background-color: #D5B942;width:100%;height: 30px ;text-align: right;font-family: bold; color: black;padding-right:10px;}
+.pie{margin: 0 auto;color: black}
+.bg{background-color: black;width: 20%;float: left;display: inline-block;display: block; height: 6530px; text-align: center;}
 p { color: #35302D}
-
 h1 {font-weight: 700; margin: 20px 0; color: #000;}
-
-header {background: url(https://www.telesurtv.net/__export/1510353441275/sites/telesur/img/multimedia/2017/11/10/librerxa1.jpg) center top fixed;  margin: 0; padding: 50px 0; background-size:  cover }
+.frases{padding-bottom: 55px}
+.covi {font-family:bold;}
+header {background: url(https://s1.1zoom.me/b5050/780/348522-admin_3840x2400.jpg) center bottom fixed;  margin: 0; padding: 15px 0; background-size:  cover }
 
  /* background-image: url(../img/fondo1.jpg); background-size: cover;
- background-position: center top; background-attachment: fixed ---- esto vamos a resumir */
+ background-position: center top; background-attachment: fixed */
 
 /* background-size: cover es un valor que sirve para cubrir el 100% de alto o de alto dependiendo el tamanio,
  el problema es que perdemos mucha foto.. */
@@ -23,7 +33,6 @@ header {background: url(https://www.telesurtv.net/__export/1510353441275/sites/t
 .headerHome {height: 200px; text-align: center}
 header a {text-decoration: none}
 
-/* CAMBIOS DE LA CLASE DISPLAY */
 
 /* Transition: es una propiedad que hace que los cambios de color o los cambios sean paulatinos, y no al instante
 , de a poco */
@@ -43,15 +52,9 @@ h1,h2 { text-align: center }
 /* border es con el siguiente orden: ancho, estilo (solid, dashed y dotted) y color */
 /* el border-radius es para hacer que los bordes se redondeen */
 
-/* CAMBIOS DE LA CLASE DISPLAY  */
 
 
-footer { text-align: center; font-size: 14px; padding: 40px 0 }
-
-
-/* nav a, es un selector descendente, o sea, serian los a contenidos en el nav */
-
-
+footer { text-align: right; font-size: 14px; padding: 40px 0 }
 
 
 /*contacto*/
@@ -74,12 +77,13 @@ footer { text-align: center; font-size: 14px; padding: 40px 0 }
 #botones { padding: 4px; margin-top: 3px }
 .btn-pag { margin: 4px }
 
+.select{display: block;}
+.sl{display: inline-block;}
 
 
 
 @media only screen and (min-width: 768px) {
-
-
+.container{margin: 0 auto; text-align: center;}
 nav a { display: inline-block }
 
 .containerweb { margin: 0 auto; max-width: 900px; padding: 0 20px; text-align: center }
@@ -88,5 +92,7 @@ nav a { display: inline-block }
 
 }
 
-.select{display: block;}
-.sl{display: inline-block;}
+
+@media only screen and (max-width: 768px){
+	.container{padding-left: 40px}
+}
